@@ -19,6 +19,10 @@ def hangman():
 
         guessed_chars.add(guess)  # Add the guessed character to the set
 
+        if len(guess) > 1:
+            print("You can only guess one character at a time.")
+            continue    # Only accept 1 character
+
         if guess in word_chars:
             print("Correct!")
             # Remove guessed letter from set to avoid counting it again
